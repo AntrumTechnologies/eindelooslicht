@@ -4,46 +4,55 @@ title: "{{ site.title }}"
 description: "{{ site.description }}"
 ---
 
-<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-
-<header class="hero">
-  <div class="hero-content">
-    <h1>{{ site.title }}</h1>
-    <p>{{ site.description }}</p>
-    <!-- <a href="#collectie" class="cta">Bekijk Collectie</a> -->
-  </div>
-</header>
-
-<main>
-  <section id="collectie" class="showcase">
-    <h2>Onze Collectie</h2>
-    <div class="gallery">
-      {% for lamp in site.data.lamps %}
-      <div class="lamp">
-        <img src="{{ lamp.image | prepend: site.baseurl }}" alt="{{ lamp.title }}">
-        <h3>{{ lamp.title }}</h3>
-        <p>{{ lamp.description }}</p>
-      </div>
-      {% endfor %}
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body class="bg-white text-slate-900">
+  <header class="hero">
+    <div class="hero-content">
+      <h1>{{ site.title }}</h1>
+      <p>{{ site.description }}</p>
+      <!-- <a href="#collectie" class="cta">Bekijk Collectie</a> -->
     </div>
-  </section>
+  </header>
 
-  <section class="intro">
-    <h2>Over ons</h2>
-    <p>We combineren design, technologie en sfeer. Elke lampenkap wordt lokaal geproduceerd met oog voor detail. Iedere lampenkap wordt door een robot geproduceerd, maar uiteindelijk komt er altijd een menselijke hand aan de afwerking te pas.</p>
-    <p>Geïnspireerd door het erfgoed van Eindhoven als lichtstad, creëren wij verlichte objecten die spreken.</p>
-  </section>
+  <main>
+    <section id="collectie" class="showcase">
+      <h2>Onze Collectie</h2>
+      <div class="gallery">
+        {% for lamp in site.data.lamps %}
+        <div class="lamp">
+          <img src="{{ lamp.image | prepend: site.baseurl }}" alt="{{ lamp.title }}">
+          <h3>{{ lamp.title }}</h3>
+          <p>{{ lamp.description }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
 
-  <section class="contact">
-    <h2>Contact</h2>
-    <p>
-      Interesse in een lampenkap of samenwerking?<br>
-      Mail ons via <a href="mailto:{{ site.email }}">{{ site.email }}</a> of volg ons op
-      <a href="{{ site.instagram }}" target="_blank" rel="noopener">Instagram</a>.
-    </p>
-  </section>
-</main>
+    <section class="intro">
+      <h2>Over ons</h2>
+      <p>We combineren design, technologie en sfeer. Elke lampenkap wordt lokaal geproduceerd met oog voor detail. Iedere lampenkap wordt door een robot geproduceerd, maar uiteindelijk komt er altijd een menselijke hand aan de afwerking te pas.</p>
+      <p>Geïnspireerd door het erfgoed van Eindhoven als lichtstad, creëren wij verlichte objecten die spreken.</p>
+    </section>
 
-<footer>
-  <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }} – Made in Eindhoven – Powered by <a href="https://antrum.nl">Antrum</a></p>
-</footer>
+    <section class="contact">
+      <h2>Contact</h2>
+      <p>
+        Interesse in een lampenkap of samenwerking?<br>
+        Mail ons via <a href="mailto:{{ site.email }}">{{ site.email }}</a> of volg ons op
+        <a href="{{ site.instagram }}" target="_blank" rel="noopener">Instagram</a>.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }} – Made in Eindhoven – Powered by <a href="https://antrum.nl">Antrum</a></p>
+  </footer>
+</body>
+</html>
