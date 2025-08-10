@@ -10,12 +10,18 @@ description: "{{ site.description }}"
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{{ site.title }}</title>
+  <link rel="shortcut icon" type="image/png" href="{{ '/favicon.png' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link href="{{ '/assets/fontawesome/css/fontawesome.css' | relative_url }}" rel="stylesheet" />
+  <link href="{{ '/assets/fontawesome/css/light.css' | relative_url }}" rel="stylesheet" />
 </head>
 <body class="bg-white text-slate-900">
   <header class="hero">
     <div class="hero-content">
-      <h1>{{ site.title }}</h1>
+      <h1 style="display: flex; align-items: center; gap: 1.5rem;">
+        <i class="fa-light fa-lightbulb" style="font-size: 1.5em; color: goldenrod;"></i>
+        {{ site.title }}
+      </h1>
       <p>{{ site.description }}</p>
       <!-- <a href="#collectie" class="cta">Bekijk Collectie</a> -->
     </div>
@@ -52,7 +58,7 @@ description: "{{ site.description }}"
   </main>
 
   <footer>
-    <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }} – Made in Eindhoven – Powered by <a href="https://antrum.nl">Antrum</a></p>
+    <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }} – Made in <i class="fas fa-lightbulb" style="color: goldenrod;"></i> Eindhoven – Powered by <a href="https://antrum.nl">Antrum</a></p>
   </footer>
 </body>
 </html>
