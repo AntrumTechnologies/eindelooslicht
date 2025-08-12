@@ -19,17 +19,20 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Eindeloos Licht
-email: info@eindelooslicht.nl
+email: eindelooslicht@antrum.nl
 description: "Unieke 3D-geprinte lampenkappen uit de lichtstad"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://eindelooslicht.nl" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+instagram: "https://instagram.com/eindelooslicht"
+
 
 # Build settings
 theme: minima
 plugins:
   - jekyll-feed
+
+gems:
+- jekyll-email-protect
 
 # Exclude from processing.
 # The following items will not be processed, by default.

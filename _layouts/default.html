@@ -51,8 +51,7 @@ description: "{{ site.description }}"
       <h2>Contact</h2>
       <p>
         Interesse in een lampenkap of samenwerking?<br>
-        Mail ons via <a href="mailto:{{ site.email }}">{{ site.email }}</a> of volg ons op
-        <a href="{{ site.instagram }}" target="_blank" rel="noopener">Instagram</a>.
+        Mail ons <a href="mailto:{{ site.email | encode_email }}">door hier te klikken</a> of volg ons op <a href="{{ site.instagram }}" target="_blank" rel="noopener">Instagram</a>.
       </p>
     </section>
   </main>
